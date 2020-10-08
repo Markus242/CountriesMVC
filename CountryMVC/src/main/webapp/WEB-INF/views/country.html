@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div th:replace="../views/header :: header"></div>
+
+<div class="container">
+    <h2 class="text-">Current country</h2>
+    <div>
+        <label for="country-name">Name</label>
+        <p id="country-name" th:text="${country_by_code.name}"></p>
+    </div>
+    <div>
+        <label for="county-code">Country code</label>
+        <p id="county-code" th:text="${country_by_code.code}"></p>
+    </div>
+    <div>
+        <label for="county-cont">Continent</label>
+        <p id="county-cont" th:text="${country_by_code.continent}"></p>
+    </div>
+    <div>
+    <label for="county-surf">Surface area</label>
+    <p id="county-surf" th:text="${country_by_code.surfaceArea}"></p>
+    </div>
+    <div>
+        <label for="county-pop">Population</label>
+        <p id="county-pop" th:text="${country_by_code.population}"></p>
+    </div>
+</div>
+</body>
+</html>
